@@ -18,3 +18,8 @@ const topicSchema = new mongoose.Schema(
 const Topic = mongoose.model("Topic", topicSchema);
 
 export default Topic;
+
+
+// - id
+// - name (Arrays, Strings, DP, React, Node, etc.)
+// - slug

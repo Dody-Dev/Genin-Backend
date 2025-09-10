@@ -35,33 +35,51 @@ const assignmentSchema = new mongoose.Schema(
       required: true,
     },
     test_cases: {
-      type: mongoose.Schema.Types.Mixed, // Store JSON data for test cases
+      type: mongoose.Schema.Types.Mixed, 
     },
-    mcq_options: {
-      type: mongoose.Schema.Types.Mixed, // Store MCQ options as JSON
+    mcq_options: {                                        //type: mongoose.Schema.Types.Mixed, is used to store any data type like array of objects
+      type: mongoose.Schema.Types.Mixed, 
     },
     solution_code: {
       type: String,
-      select: false, // Hidden by default
+      select: false, 
     },
     solution_video: {
-      type: String, // URL for solution video
+      type: String, 
     },
     solution_explanation: {
-      type: String, // Text explanation of the solution
+      type: String, 
     },
     hints: {
-      type: [String], // Array of hints in JSON format
+      type: [String], 
       default: [],
     },
     is_active: {
       type: Boolean,
-      default: true, // Whether the assignment is active or not
+      default: true, 
     },
   },
-  { timestamps: true } // Created and Updated At fields will be automatically generated
+  { timestamps: true } 
 );
 
 const Assignment = mongoose.model("Assignment", assignmentSchema);
 
 export default Assignment;
+
+
+// - id
+// - title
+// - slug (url-friendly)
+// - problem_statement (rich text/HTML)
+// - problem_type (coding/mcq/project/theory)
+// - category_id (foreign key) => topics
+// - difficulty (easy/medium/hard)
+// - score (points for this problem)
+// - test_cases (JSON - for coding)
+// - mcq_options (JSON - for MCQ)
+// - solution_code (text - hidden)
+// - solution_video ()
+// - solution_explanation (text)
+// - hints (JSON array)
+// - is_active (boolean)
+// - created_at, updated_at

@@ -50,3 +50,17 @@ const userSchema = new mongoose.Schema(
 const User = mongoose.model("User", userSchema);
 
 export default User;
+
+
+// - id (primary key)
+// - email (unique)
+// - password (hashed)
+// - name
+// - phone (unique - for device tracking)
+// - email_verified (boolean)
+// - verification_token
+// - ip_addresses (JSON array - track IPs)
+// - payment_status (trial/paid/expired)
+// - payment_expiry (date)
+// - created_at, updated_at
+// - last_login
