@@ -11,6 +11,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
       minlength: 6, 
+      select:false
     },
     name: {
       type: String,
@@ -27,17 +28,9 @@ const userSchema = new mongoose.Schema(
     verification_token: {
       type: String,
     },
-    device_fingerprints: {
-      type: [String], 
-      default: [],
-    },
     ip_addresses: {
       type: [String],
       default: [],
-    },
-    max_devices: {
-      type: Number,
-      default: 1,
     },
     payment_status: {
       type: String,
