@@ -2,13 +2,14 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { DB_NAME } from "./constants.js";
+import {app} from "./app.js";
 
 dotenv.config();
 
-const app = express();
+// const app = express();
 const PORT = process.env.PORT || 5047;
 
-app.use(express.json());          //convert incoming JSON to JS object
+app.use(express.json());                                                                                 //convert incoming JSON to JS object
 
 
 const dbconnect = async () => {

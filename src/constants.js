@@ -1,4 +1,4 @@
 
-export const DB_NAME = "genin_achdemy";
+export const DB_NAME = "genin_academy";
 
 
