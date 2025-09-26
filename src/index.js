@@ -6,8 +6,8 @@ import {app} from "./app.js";
 
 dotenv.config();
 
-// const app = express();
-const PORT = process.env.PORT || 5047;
+
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());                                                                                 //convert incoming JSON to JS object
 
